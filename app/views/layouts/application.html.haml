@@ -26,8 +26,6 @@
         =link_to "Home", root_path
         |
         - if current_user
-          =link_to "My Profile", profile_user_path(:current)
-          |
           =link_to "Logout", logout_path
         - else
           =link_to "Register", new_user_path
