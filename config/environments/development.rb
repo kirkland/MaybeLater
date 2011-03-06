@@ -22,5 +22,9 @@ GenericApp::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+
+  # refresh sass on every request
+  Sass::Plugin.options[:always_update] = true
+  Sass::Plugin.options[:template_location] = 'app/stylesheets'
 end
 
