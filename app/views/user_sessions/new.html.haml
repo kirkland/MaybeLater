@@ -1,0 +1,11 @@
+%h1 Log In
+- form_for @user_session do |form|
+  %ol.formList
+    %li
+      = form.label :username, "Username"
+      = form.text_field :username
+    %li
+      = form.label :password, "Password"
+      = form.password_field :password
+    %li
+      = form.submit "Submit"
