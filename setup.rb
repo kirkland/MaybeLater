@@ -23,7 +23,8 @@ FILES = [
   'config/initializers/secret_token.rb',
   'config/initializers/session_store.rb',
   'config/initializers/session_store.rb',
-  'config/routes.rb']
+  'config/routes.rb',
+  'app/views/layouts/application.html.haml']
 
 FILES.each do |filename|
   text = File.read(filename).gsub('GenericApp', appName)
