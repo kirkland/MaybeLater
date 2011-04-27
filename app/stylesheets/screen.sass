@@ -1,0 +1,22 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+@import blueprint
+@import blueprint/reset
+
++blueprint
+
+$blueprint-grid-columns: 24
+$blueprint-grid-width: 30px
+
+body
+  +container
+  #logo
+    +column(24)
+  #site_nav
+    +column(4)
+  #content
+    +column(20)
+    margin-right: 0px

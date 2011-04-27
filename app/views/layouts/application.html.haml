@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title GenericApp
+    %title Deferit
     = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'print.css', :media => 'print'
     /[if IE]
@@ -11,7 +11,7 @@
     = csrf_meta_tag
   %body
     #logo
-      GenericApp
+      Deferit
     #main
       - if flash[:error].present?
         #flash-error
@@ -23,13 +23,13 @@
           %ul
             %li= flash[:notice]
       #site_nav
-        =link_to "Home", root_path
-        |
-        - if current_user
-          =link_to "Logout", logout_path
-        - else
-          =link_to "Register", new_user_path
-          |
-          =link_to "Log In", login_path
-      = yield
+        %ol
+          %li=link_to "Home", root_path
+          - if current_user
+            %li=link_to "Logout", logout_path
+          - else
+            %li=link_to "Register", new_user_path
+            %li=link_to "Log In", login_path
+      #content
+        = yield
 

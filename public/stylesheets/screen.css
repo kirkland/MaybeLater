@@ -1250,3 +1250,45 @@ textarea {
   width: 390px;
   height: 250px;
 }
+
+/* line 14, ../../app/stylesheets/screen.scss */
+body {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 17, ../../app/stylesheets/screen.scss */
+body #logo {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 138, ../../../../.gem/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #logo {
+  overflow-x: hidden;
+}
+/* line 19, ../../app/stylesheets/screen.scss */
+body #site_nav {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+}
+/* line 138, ../../../../.gem/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #site_nav {
+  overflow-x: hidden;
+}
+/* line 21, ../../app/stylesheets/screen.scss */
+body #content {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 790px;
+  margin-right: 0px;
+}
+/* line 138, ../../../../.gem/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #content {
+  overflow-x: hidden;
+}
