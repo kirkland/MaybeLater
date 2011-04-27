@@ -61,3 +61,69 @@ q:before, q:after, blockquote:before, blockquote:after {
 a img {
   border: none;
 }
+
+/* line 8, ../../app/stylesheets/screen.scss */
+body {
+  background-color: #ecde6a;
+}
+
+/* line 11, ../../app/stylesheets/screen.scss */
+#logo {
+  width: 960px;
+  font-size: 40px;
+  background-color: #908214;
+  line-height: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 22, ../../app/stylesheets/screen.scss */
+h1 {
+  padding: 0px;
+  margin: 0;
+}
+
+/* line 26, ../../app/stylesheets/screen.scss */
+#main {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  background-color: white;
+}
+
+/* line 33, ../../app/stylesheets/screen.scss */
+.inline {
+  display: inline;
+}
+
+/* line 36, ../../app/stylesheets/screen.scss */
+#flash-notice, #flash-error {
+  width: 100%;
+  min-height: 50px;
+  border: 1px black dashed;
+  margin-bottom: 20px;
+}
+/* line 41, ../../app/stylesheets/screen.scss */
+#flash-notice ul, #flash-error ul {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* line 45, ../../app/stylesheets/screen.scss */
+#flash-notice {
+  background-color: #e0f8f7;
+}
+
+/* line 48, ../../app/stylesheets/screen.scss */
+#flash-error {
+  background-color: #fe2e2e;
+}
+
+/* line 51, ../../app/stylesheets/screen.scss */
+#site_nav {
+  text-align: center;
+}
