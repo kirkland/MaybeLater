@@ -1,9 +1,9 @@
-/* line 1, app/stylesheets/application.sass */
+/* line 1, ../../app/stylesheets/application.scss */
 body {
   background-color: #ecde6a;
 }
 
-/* line 4, app/stylesheets/application.sass */
+/* line 4, ../../app/stylesheets/application.scss */
 #logo {
   width: 960px;
   font-size: 40px;
@@ -16,13 +16,13 @@ body {
   padding-right: 15px;
 }
 
-/* line 15, app/stylesheets/application.sass */
+/* line 15, ../../app/stylesheets/application.scss */
 h1 {
   padding: 0px;
   margin: 0;
 }
 
-/* line 19, app/stylesheets/application.sass */
+/* line 19, ../../app/stylesheets/application.scss */
 #main {
   width: 960px;
   margin-left: auto;
@@ -31,35 +31,35 @@ h1 {
   background-color: white;
 }
 
-/* line 26, app/stylesheets/application.sass */
+/* line 26, ../../app/stylesheets/application.scss */
 .inline {
   display: inline;
 }
 
-/* line 29, app/stylesheets/application.sass */
+/* line 29, ../../app/stylesheets/application.scss */
 #flash-notice, #flash-error {
   width: 100%;
   min-height: 50px;
   border: 1px black dashed;
   margin-bottom: 20px;
 }
-/* line 34, app/stylesheets/application.sass */
+/* line 34, ../../app/stylesheets/application.scss */
 #flash-notice ul, #flash-error ul {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 38, app/stylesheets/application.sass */
+/* line 38, ../../app/stylesheets/application.scss */
 #flash-notice {
   background-color: #e0f8f7;
 }
 
-/* line 41, app/stylesheets/application.sass */
+/* line 41, ../../app/stylesheets/application.scss */
 #flash-error {
   background-color: #fe2e2e;
 }
 
-/* line 44, app/stylesheets/application.sass */
+/* line 44, ../../app/stylesheets/application.scss */
 #site_nav {
   text-align: center;
 }

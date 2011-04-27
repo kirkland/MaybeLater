@@ -1,0 +1,45 @@
+body {
+  background-color: #ecde6a; }
+
+#logo {
+  width: 960px;
+  font-size: 40px;
+  background-color: #908214;
+  line-height: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+h1 {
+  padding: 0px;
+  margin: 0; }
+
+#main {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  background-color: white; }
+
+.inline {
+  display: inline; }
+
+#flash-notice, #flash-error {
+  width: 100%;
+  min-height: 50px;
+  border: 1px black dashed;
+  margin-bottom: 20px;
+  ul {
+    margin-left: 10px;
+    margin-right: 10px; } }
+
+#flash-notice {
+  background-color: #e0f8f7; }
+
+#flash-error {
+  background-color: #fe2e2e; }
+
+#site_nav {
+  text-align: center; }
