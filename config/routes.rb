@@ -6,5 +6,5 @@ MaybeLater::Application.routes.draw do
 
   resources :tasks
 
-  root :to => 'tasks#new'
+  root :to => 'tasks#index'
 end

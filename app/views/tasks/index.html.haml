@@ -1,0 +1,10 @@
+%h1 Tasks
+
+%table
+  %tr
+    %th Ranking
+    %th Task
+  =@tasks.each do |t|
+    %tr
+      %td=t.ranking
+      %td=t.content
