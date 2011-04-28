@@ -4,5 +4,7 @@ GenericApp::Application.routes.draw do
   get "logout" => "user_sessions#destroy"
   resources :user_sessions
 
-  root :to => 'user_sessions#new'
+  resources :tasks
+
+  root :to => 'tasks#new'
 end

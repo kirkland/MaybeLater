@@ -7,6 +7,7 @@ gem 'sass'
 gem 'authlogic', :git => 'http://github.com/binarylogic/authlogic.git'
 gem 'formtastic'
 gem 'compass'
+gem 'inherited_resources'
 
 group :test do  
 end

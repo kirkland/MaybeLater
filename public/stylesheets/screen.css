@@ -1251,14 +1251,14 @@ textarea {
   height: 250px;
 }
 
-/* line 14, ../../app/stylesheets/screen.scss */
+/* line 14, app/stylesheets/screen.sass */
 body {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 17, ../../app/stylesheets/screen.scss */
+/* line 16, app/stylesheets/screen.sass */
 body #logo {
   display: inline;
   float: left;
@@ -1269,7 +1269,7 @@ body #logo {
 * html body #logo {
   overflow-x: hidden;
 }
-/* line 19, ../../app/stylesheets/screen.scss */
+/* line 18, app/stylesheets/screen.sass */
 body #site_nav {
   display: inline;
   float: left;
@@ -1280,7 +1280,7 @@ body #site_nav {
 * html body #site_nav {
   overflow-x: hidden;
 }
-/* line 21, ../../app/stylesheets/screen.scss */
+/* line 20, app/stylesheets/screen.sass */
 body #content {
   display: inline;
   float: left;
