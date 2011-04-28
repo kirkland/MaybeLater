@@ -3,7 +3,7 @@ class CreateTasks < ActiveRecord::Migration
     create_table :tasks do |t|
       t.string :content, :limit => 256
       t.integer :rank
-      t.integer :user_id
+      t.integer :user_id, :null => false
 
       t.timestamps
     end

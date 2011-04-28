@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20110428012343) do
   create_table "tasks", :force => true do |t|
     t.string   "content",    :limit => 256
     t.integer  "rank"
-    t.integer  "user_id"
+    t.integer  "user_id",                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
