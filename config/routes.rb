@@ -1,4 +1,4 @@
-GenericApp::Application.routes.draw do
+MaybeLater::Application.routes.draw do
   resources :users
   get "login" => "user_sessions#new"
   get "logout" => "user_sessions#destroy"
