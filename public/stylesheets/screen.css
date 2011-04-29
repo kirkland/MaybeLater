@@ -1,7 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 4, ../../../../.gem/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html, body {
   margin: 0;
@@ -1251,14 +1247,14 @@ textarea {
   height: 250px;
 }
 
-/* line 14, app/stylesheets/screen.sass */
+/* line 9, app/stylesheets/screen.sass */
 body {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 16, app/stylesheets/screen.sass */
+/* line 11, app/stylesheets/screen.sass */
 body #logo {
   display: inline;
   float: left;
@@ -1269,7 +1265,7 @@ body #logo {
 * html body #logo {
   overflow-x: hidden;
 }
-/* line 18, app/stylesheets/screen.sass */
+/* line 13, app/stylesheets/screen.sass */
 body #site_nav {
   display: inline;
   float: left;
@@ -1280,7 +1276,7 @@ body #site_nav {
 * html body #site_nav {
   overflow-x: hidden;
 }
-/* line 20, app/stylesheets/screen.sass */
+/* line 15, app/stylesheets/screen.sass */
 body #content {
   display: inline;
   float: left;
