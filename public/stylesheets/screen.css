@@ -1288,3 +1288,8 @@ body #content {
 * html body #content {
   overflow-x: hidden;
 }
+
+/* line 20, app/stylesheets/screen.sass */
+td {
+  border: 1px black solid;
+}
