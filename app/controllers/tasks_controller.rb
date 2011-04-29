@@ -9,5 +9,6 @@ class TasksController < ApplicationController
 
   def find_user
     @user = current_user
+    redirect_to root_path if @user.nil?
   end
 end

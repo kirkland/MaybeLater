@@ -6,5 +6,5 @@ MaybeLater::Application.routes.draw do
 
   resources :tasks
 
-  root :to => 'tasks#index'
+  root :to => 'user_sessions#new'
 end
