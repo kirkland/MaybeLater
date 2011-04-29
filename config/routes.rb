@@ -4,7 +4,11 @@ MaybeLater::Application.routes.draw do
   get "logout" => "user_sessions#destroy"
   resources :user_sessions
 
-  resources :tasks
+  resources :tasks do
+    collection do
+      post :update_rank
+    end
+  end
 
   root :to => 'tasks#index'
 end

@@ -13,6 +13,13 @@ class TasksController < ApplicationController
     update! { tasks_path }
   end
 
+  def update_rank
+    t = Task.find(params[:id])
+    t.rank = params[:new_rank].to_i == -1 ? Task.order('rank DESC').first.rank + 1 : params[:new_rank].to_i
+    t.save
+    render :json => {:task_id => t.id, :task_rank => t.rank}
+  end
+
   private
 
   def find_user
