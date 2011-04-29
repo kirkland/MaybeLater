@@ -8,3 +8,6 @@
     %tr{:class => cycle('even','odd')}
       %td=t.rank
       %td=t.content
+
+- content_for :js do
+  setupTasksDragDrop();
