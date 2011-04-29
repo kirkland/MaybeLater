@@ -5,6 +5,6 @@
     %th Ranking
     %th Task
   -@tasks.each do |t|
-    %tr
+    %tr{:class => cycle('even','odd')}
       %td=t.rank
       %td=t.content

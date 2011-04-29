@@ -1247,14 +1247,14 @@ textarea {
   height: 250px;
 }
 
-/* line 9, app/stylesheets/screen.sass */
+/* line 10, app/stylesheets/screen.sass */
 body {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 11, app/stylesheets/screen.sass */
+/* line 12, app/stylesheets/screen.sass */
 body #logo {
   display: inline;
   float: left;
@@ -1265,7 +1265,7 @@ body #logo {
 * html body #logo {
   overflow-x: hidden;
 }
-/* line 13, app/stylesheets/screen.sass */
+/* line 14, app/stylesheets/screen.sass */
 body #site_nav {
   display: inline;
   float: left;
@@ -1276,7 +1276,7 @@ body #site_nav {
 * html body #site_nav {
   overflow-x: hidden;
 }
-/* line 15, app/stylesheets/screen.sass */
+/* line 16, app/stylesheets/screen.sass */
 body #content {
   display: inline;
   float: left;
