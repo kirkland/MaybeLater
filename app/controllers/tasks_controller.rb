@@ -5,6 +5,14 @@ class TasksController < ApplicationController
     @tasks = @user.tasks.order('rank DESC')
   end
 
+  def create
+    create! { new_task_path }
+  end
+
+  def update
+    update! { tasks_path }
+  end
+
   private
 
   def find_user
