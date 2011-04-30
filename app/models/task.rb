@@ -1,5 +1,7 @@
 class Task < ActiveRecord::Base
+  attr_accessor :rank
   after_save :update_ranks
+  
 
   def update_ranks
     if rank.present? && rank_changed? && user.tasks.find_by_rank(rank).present?
