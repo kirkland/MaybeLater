@@ -16,7 +16,7 @@ function setupTasksDragDrop(updatePath) {
       } else {
         var newRank = -1; // special value, means higest rank
       }
-      console.log(aboveRank);
+      //      console.log(aboveRank);
 
       // AJAX here, set dragged element's rank to prev's rank minus one
       $.ajax(updatePath, {
@@ -26,7 +26,7 @@ function setupTasksDragDrop(updatePath) {
          new_rank: newRank
         },
         success: function(data) {
-          console.log(data);
+	// console.log(data);
         },
         error: function () {
           alert("something went wrong");
