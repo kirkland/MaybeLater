@@ -1,12 +1,17 @@
 class Task < ActiveRecord::Base
   attr_accessor :rank
-  after_save :update_ranks
-  
 
-  def update_ranks
-    if rank.present? && rank_changed? && user.tasks.find_by_rank(rank).present?
-      Task.where("id != ?", id).where("rank >= ?", rank).update_all("rank = rank + 1")
+  # optionally pass in user from controller since we already know it,
+  # and don't want to bother with slow user method in this class
+  def update_rank(new_rank, user=nil)
+    user = self.user if user.nil?
+    
+    if new_rank == -1
+      user.tasks << self
+    else
+      user.task_ids.insert(new_rank, id) # TODO: insert the Task model in to the tasks array (which will automatically update task_ids)
     end
+    user.save!
   end
   
   # probably slow, probably not used
