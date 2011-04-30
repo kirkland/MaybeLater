@@ -10,8 +10,8 @@ class TasksController < ApplicationController
   end
 
   def update_rank
-    Task.find(params[:id].to_i).update_rank(params[:new_rank].to_i, @user)
-    render :nothing => true
+    @user.update_attribute(:task_ids, params[:task_ids].map(&:to_i))
+    render :text => @user.task_ids.inspect
   end
 
   private

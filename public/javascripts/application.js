@@ -10,26 +10,20 @@ function setupTasksDragDrop(updatePath) {
     items: 'tr',
     helper: fixHelper,
     update: function(event, ui) { 
-      var belowRank = ui.item.next().attr('data-rank');
-      if (belowRank) {
-        var newRank = belowRank;
-      } else {
-        var newRank = -1; // special value, means lowest rank (highest number)
-      }
-      //      console.log(newRank);
-
-      // AJAX here, set dragged element's rank to prev's rank minus one
+      var newTasksOrder = $.map($('#tasks tr'), function(t) {
+        return $(t).attr('data-id');
+      });
+      //      console.log(newTasksOrder);
       $.ajax(updatePath, {
         type: 'POST',
         data: {
-         id: ui.item.attr('data-id'),
-         new_rank: newRank
+         task_ids: newTasksOrder
         },
         success: function(data) {
 		  //	  console.log(data);
         },
         error: function () {
-          alert("something went wrong");
+		  //          console.log("something went wrong");
         }
       });
     }

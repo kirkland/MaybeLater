@@ -2,11 +2,9 @@
 
 %table#tasks
   %tr
-    %th Ranking
     %th Task
   -@tasks.each do |t|
-    %tr{:class => cycle('even','odd'), 'data-id' => t.id, 'data-rank' => t.rank}
-      %td=t.rank
+    %tr{:class => cycle('even','odd'), 'data-id' => t.id}
       %td=t.content
 
 - content_for :js do
