@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_filter :find_user, :only => [:index]
 
   def index
-    @tasks = @user.tasks.order('rank DESC')
+    @tasks = @user.tasks
   end
 
   def create
