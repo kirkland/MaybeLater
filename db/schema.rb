@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20110430181024) do
     t.string   "content",    :limit => 256
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
