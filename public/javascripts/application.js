@@ -13,7 +13,6 @@ function setupTasksDragDrop(updatePath) {
       var newTasksOrder = $.map($('#tasks tr'), function(t) {
         return $(t).attr('data-id');
       });
-       console.log(newTasksOrder);
       //      console.log(newTasksOrder);
       $.ajax(updatePath, {
         type: 'POST',
@@ -21,7 +20,7 @@ function setupTasksDragDrop(updatePath) {
          ordered_task_ids: newTasksOrder
         },
         success: function(data) {
-		  	  console.log(data);
+//		  	  console.log(data);
         },
         error: function () {
 		  //          console.log("something went wrong");
