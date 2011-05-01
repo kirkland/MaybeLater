@@ -5,6 +5,7 @@
     %th Task
   -@tasks.each do |t|
     %tr{:class => cycle('even','odd'), 'data-id' => t.id}
+      %td=t.id
       %td=t.content
 
 - content_for :js do

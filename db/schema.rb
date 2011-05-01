@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20110430181024) do
     t.string   "persistence_token"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "task_ids",          :default => "'--- []\n\n'"
+    t.text     "ordered_task_ids",  :default => "'--- []\n\n'"
   end
 
 end

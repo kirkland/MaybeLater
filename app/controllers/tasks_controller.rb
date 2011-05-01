@@ -14,8 +14,8 @@ class TasksController < ApplicationController
   end
 
   def reorder
-    @user.update_attribute(:task_ids, params[:task_ids].map(&:to_i))
-    render :text => @user.task_ids.inspect
+    @user.set_ordered_task_ids(params[:ordered_task_ids].map(&:to_i))
+    render :text => @user.ordered_task_ids.inspect
   end
 
   private
