@@ -6,7 +6,7 @@ MaybeLater::Application.routes.draw do
 
   resources :tasks do
     collection do
-      post :update_rank
+      post :reorder
     end
   end
 

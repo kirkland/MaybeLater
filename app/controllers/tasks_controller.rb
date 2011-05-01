@@ -1,5 +1,9 @@
 class TasksController < ApplicationController
-  before_filter :find_user_and_tasks, :only => [:index, :update_rank]
+  before_filter :find_user, :only => [:index, :reorder]
+
+  def index
+    @tasks = @user.ordered_tasks
+  end
 
   def create
     create! { new_task_path }
@@ -9,16 +13,15 @@ class TasksController < ApplicationController
     update! { tasks_path }
   end
 
-  def update_rank
+  def reorder
     @user.update_attribute(:task_ids, params[:task_ids].map(&:to_i))
     render :text => @user.task_ids.inspect
   end
 
   private
 
-  def find_user_and_tasks
+  def find_user
     @user = current_user
-    @tasks = @user.tasks
     redirect_to login_path if @user.nil?
   end
 end
