@@ -13,10 +13,10 @@ function setupNewTaskForm(createPath) {
       type: 'POST',
       data: ajaxData,
       success: function(data) {
-	  // stop waiting gif
-	  var newRow = $('#tasks tbody tr').first().clone();
-	  newRow.attr('data-id', data.task.id).find('td').html(data.task.content);
-	  newRow.prependTo($('#tasks tbody'));
+    // stop waiting gif
+    var newRow = $('#tasks tbody tr').first().clone();
+    newRow.attr('data-id', data.task.id).find('td').html(data.task.content);
+    newRow.prependTo($('#tasks tbody'));
       },
       error: function(data) {
 //        console.log("error"); 
@@ -48,10 +48,10 @@ function setupTasksDragDrop(updatePath) {
          ordered_task_ids: newTasksOrder
         },
         success: function(data) {
-//		  	  console.log(data);
+//          console.log(data);
         },
         error: function () {
-		  //          console.log("something went wrong");
+      //          console.log("something went wrong");
         }
       });
     }
