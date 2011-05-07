@@ -12,15 +12,16 @@ function setupNewTaskForm(createPath) {
 
     // add new row immediately. we'll populate data-id when AJAX returns
     var newRow = $('#tasks tbody tr').first().clone();
-    newRow.attr('data-id', '').find('td').html(content);
+    newRow.attr('data-id', '').find('td').html(content).addClass('just_added');
     newRow.prependTo($('#tasks tbody'));
     
     $.ajax(createPath, {
       type: 'POST',
       data: ajaxData,
       success: function(data) {
-        console.log(data);
+//        console.log(data);
         newRow.attr('data-id', data.task.id);
+        newRow.find('td').removeClass('just_added');
       },
       error: function(data) {
         //          console.log("error"); 
