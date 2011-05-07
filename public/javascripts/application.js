@@ -37,6 +37,7 @@ function setupTasksDragDrop(updatePath) {
   $('#tasks').sortable({
     items: 'tr',
     helper: fixHelper,
+    containment: "#tasks tbody",
     update: function(event, ui) { 
       var newTasksOrder = $.map($('#tasks tr'), function(t) {
         return $(t).attr('data-id');
