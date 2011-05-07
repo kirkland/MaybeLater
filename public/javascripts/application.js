@@ -6,10 +6,14 @@ function setupTasksIndex(updatePath, createPath) {
 function setupNewTaskForm(createPath) {
   $('#task_submit').click(event, function () {
   event.preventDefault();
+  // show some waiting gif
+  var ajaxData = $('#new_task').serialize();
+  $('#task_content').val('');
     $.ajax(createPath, {
       type: 'POST',
-      data: $('#new_task').serialize(),
-      success: function(data) { 
+      data: ajaxData,
+      success: function(data) {
+	  // stop waiting gif
 	  var newRow = $('#tasks tbody tr').first().clone();
 	  newRow.attr('data-id', data.task.id).find('td').html(data.task.content);
 	  newRow.prependTo($('#tasks tbody'));
