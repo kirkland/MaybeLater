@@ -5,22 +5,26 @@ function setupTasksIndex(updatePath, createPath) {
 
 function setupNewTaskForm(createPath) {
   $('#task_submit').click(event, function () {
-  event.preventDefault();
-  // show some waiting gif
-  var ajaxData = $('#new_task').serialize();
-  $('#task_content').val('');
+    event.preventDefault();
+    var ajaxData = $('#new_task').serialize();
+    var content = $('#task_content').val();
+    $('#task_content').val('');
+
+    // add new row immediately. we'll populate data-id when AJAX returns
+    var newRow = $('#tasks tbody tr').first().clone();
+    newRow.attr('data-id', '').find('td').html(content);
+    newRow.prependTo($('#tasks tbody'));
+    
     $.ajax(createPath, {
       type: 'POST',
       data: ajaxData,
       success: function(data) {
-    // stop waiting gif
-    var newRow = $('#tasks tbody tr').first().clone();
-    newRow.attr('data-id', data.task.id).find('td').html(data.task.content);
-    newRow.prependTo($('#tasks tbody'));
+        console.log(data);
+        newRow.attr('data-id', data.task.id);
       },
       error: function(data) {
-//        console.log("error"); 
-//        console.log(data);
+        //          console.log("error"); 
+        //          console.log(data);
       }
     });
   });
@@ -34,7 +38,7 @@ var fixHelper = function(e, ui) {
 };
 
 function setupTasksDragDrop(updatePath) {
-  $('#tasks').sortable({
+  $('#tasks tbody').sortable({
     items: 'tr',
     helper: fixHelper,
     containment: "#tasks tbody",
