@@ -5,16 +5,21 @@ function setupTasksIndex(updatePath, createPath) {
 
 function setupNewTaskForm(createPath) {
   $('#task_submit').click(event, function () {
-	  event.preventDefault();
-	  //    console.log($('#new_task').serialize());
-        $.ajax(createPath, {
-    	    type: 'POST',
-	    data: $('#new_task').serialize()
-		    //		    success: function(data) { console.log(data);},
-		    //            error: function(data) { console.log("error"); console.log(data); }
-		    })
-	      
-      });
+  event.preventDefault();
+    $.ajax(createPath, {
+      type: 'POST',
+      data: $('#new_task').serialize(),
+      success: function(data) { 
+	  var newRow = $('#tasks tbody tr').first().clone();
+	  newRow.attr('data-id', data.task.id).find('td').html(data.task.content);
+	  newRow.prependTo($('#tasks tbody'));
+      },
+      error: function(data) {
+//        console.log("error"); 
+//        console.log(data);
+      }
+    });
+  });
 }
 
 var fixHelper = function(e, ui) {
