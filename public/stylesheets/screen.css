@@ -1290,11 +1290,11 @@ body #content {
 }
 
 /* line 21, app/stylesheets/screen.sass */
-#tasks td {
+#tasks td, #tasks th {
   border: 1px black solid;
 }
 /* line 23, app/stylesheets/screen.sass */
-#tasks td.just_added {
+#tasks td.just_added, #tasks th.just_added {
   border: 1px black dashed;
 }
 
