@@ -1321,10 +1321,37 @@ body #content {
 }
 
 /* line 42, app/stylesheets/screen.sass */
-#new_task #task_title {
-  width: 710px;
+#new_task #task_title_input {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+}
+/* line 138, ../../../../.gem/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #new_task #task_title_input {
+  overflow-x: hidden;
 }
 /* line 44, app/stylesheets/screen.sass */
+#new_task #task_title_input #task_title {
+  width: 100%;
+}
+/* line 46, app/stylesheets/screen.sass */
+#new_task #submit_button_li {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 110px;
+  margin-right: 0px;
+}
+/* line 138, ../../../../.gem/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #new_task #submit_button_li {
+  overflow-x: hidden;
+}
+/* line 49, app/stylesheets/screen.sass */
+#new_task #submit_button_li .submit_button {
+  width: 100%;
+}
+/* line 51, app/stylesheets/screen.sass */
 #new_task li {
   float: left;
 }

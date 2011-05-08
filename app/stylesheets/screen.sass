@@ -39,7 +39,14 @@ body
     border-width: 1px
 
 #new_task
-  #task_title
-    width: 710px
+  #task_title_input
+    +column(17)
+    #task_title
+      width: 100%
+  #submit_button_li
+    +column(3)
+    margin-right: 0px
+    .submit_button
+      width: 100%
   li
     float: left
