@@ -7,12 +7,12 @@ function setupNewTaskForm(createPath) {
   $('#task_submit').click(event, function () {
     event.preventDefault();
     var ajaxData = $('#new_task').serialize();
-    var content = $('#task_content').val();
-    $('#task_content').val('');
+    var title = $('#task_title').val();
+    $('#task_title').val('');
 
     // add new row immediately. we'll populate data-id when AJAX returns
     var newRow = $('#tasks tbody tr').first().clone();
-    newRow.attr('data-id', '').find('td').html(content).addClass('just_added');
+    newRow.attr('data-id', '').find('td').html(title).addClass('just_added');
     newRow.prependTo($('#tasks tbody'));
     
     $.ajax(createPath, {

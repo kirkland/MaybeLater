@@ -1321,7 +1321,7 @@ body #content {
 }
 
 /* line 42, app/stylesheets/screen.sass */
-#new_task #task_content {
+#new_task #task_title {
   width: 710px;
 }
 /* line 44, app/stylesheets/screen.sass */

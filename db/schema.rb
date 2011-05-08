@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110430181024) do
+ActiveRecord::Schema.define(:version => 20110508231219) do
 
   create_table "tasks", :force => true do |t|
-    t.string   "content",    :limit => 256
+    t.string   "title",      :limit => 256
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.text     "content"
   end
 
   create_table "users", :force => true do |t|

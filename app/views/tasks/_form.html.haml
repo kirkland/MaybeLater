@@ -1,5 +1,5 @@
 = semantic_form_for @task do |form|
   %ol
-    = form.input :content, :label => false
+    = form.input :title, :label => false
     %li
       %input.submit_button{:type => 'submit', :value => "Add Task", :id => 'task_submit'}/
