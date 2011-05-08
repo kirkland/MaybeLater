@@ -1299,12 +1299,32 @@ body #content {
 }
 
 /* line 27, app/stylesheets/screen.sass */
-.formtastic li {
+.formtastic ol {
+  padding-left: 0;
+  margin: 0;
+}
+/* line 30, app/stylesheets/screen.sass */
+.formtastic ol li {
   list-style: none;
 }
-/* line 29, app/stylesheets/screen.sass */
+/* line 32, app/stylesheets/screen.sass */
 .formtastic fieldset {
   border: none;
   padding: 0;
   margin: 0;
+}
+/* line 36, app/stylesheets/screen.sass */
+.formtastic .submit_button {
+  padding: 5px;
+  margin: 0.5em 0;
+  border-width: 1px;
+}
+
+/* line 42, app/stylesheets/screen.sass */
+#new_task #task_content {
+  width: 710px;
+}
+/* line 44, app/stylesheets/screen.sass */
+#new_task li {
+  float: left;
 }
