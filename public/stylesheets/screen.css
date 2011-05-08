@@ -1253,6 +1253,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+  font-size: 16px;
 }
 /* line 12, app/stylesheets/screen.sass */
 body #logo {
@@ -1290,37 +1291,42 @@ body #content {
 }
 
 /* line 21, app/stylesheets/screen.sass */
+input {
+  font-size: 20px;
+}
+
+/* line 25, app/stylesheets/screen.sass */
 #tasks td, #tasks th {
   border: 1px black solid;
 }
-/* line 23, app/stylesheets/screen.sass */
+/* line 27, app/stylesheets/screen.sass */
 #tasks td.just_added, #tasks th.just_added {
   border: 1px black dashed;
 }
 
-/* line 27, app/stylesheets/screen.sass */
+/* line 31, app/stylesheets/screen.sass */
 .formtastic ol {
   padding-left: 0;
   margin: 0;
 }
-/* line 30, app/stylesheets/screen.sass */
+/* line 34, app/stylesheets/screen.sass */
 .formtastic ol li {
   list-style: none;
 }
-/* line 32, app/stylesheets/screen.sass */
+/* line 36, app/stylesheets/screen.sass */
 .formtastic fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
-/* line 36, app/stylesheets/screen.sass */
+/* line 40, app/stylesheets/screen.sass */
 .formtastic .submit_button {
   padding: 5px;
   margin: 0.5em 0;
   border-width: 1px;
 }
 
-/* line 42, app/stylesheets/screen.sass */
+/* line 46, app/stylesheets/screen.sass */
 #new_task #task_title_input {
   display: inline;
   float: left;
@@ -1331,11 +1337,11 @@ body #content {
 * html #new_task #task_title_input {
   overflow-x: hidden;
 }
-/* line 44, app/stylesheets/screen.sass */
+/* line 48, app/stylesheets/screen.sass */
 #new_task #task_title_input #task_title {
   width: 100%;
 }
-/* line 46, app/stylesheets/screen.sass */
+/* line 50, app/stylesheets/screen.sass */
 #new_task #submit_button_li {
   display: inline;
   float: left;
@@ -1347,11 +1353,11 @@ body #content {
 * html #new_task #submit_button_li {
   overflow-x: hidden;
 }
-/* line 49, app/stylesheets/screen.sass */
+/* line 53, app/stylesheets/screen.sass */
 #new_task #submit_button_li .submit_button {
   width: 100%;
 }
-/* line 51, app/stylesheets/screen.sass */
+/* line 55, app/stylesheets/screen.sass */
 #new_task li {
   float: left;
 }
