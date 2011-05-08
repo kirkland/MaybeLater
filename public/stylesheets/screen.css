@@ -1297,3 +1297,14 @@ body #content {
 #tasks td.just_added {
   border: 1px black dashed;
 }
+
+/* line 27, app/stylesheets/screen.sass */
+.formtastic li {
+  list-style: none;
+}
+/* line 29, app/stylesheets/screen.sass */
+.formtastic fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
