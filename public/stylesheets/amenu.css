@@ -1,13 +1,13 @@
 /******** aMenu required ********** */
 /* line 3, app/stylesheets/amenu.sass */
-#amenu-list {
+.amenu-list {
   margin: 0px;
   padding: 0px;
   position: absolute !important;
   z-index: 999;
 }
 /* line 8, app/stylesheets/amenu.sass */
-#amenu-list li {
+.amenu-list li {
   display: block;
   margin: 0px;
   padding: 0px;
@@ -17,19 +17,19 @@
 }
 
 /* line 16, app/stylesheets/amenu.sass */
-* html #amenu-list li {
+* html .amenu-list li {
   width: 1px;
 }
 
 /* line 21, app/stylesheets/amenu.sass */
-#amenu-list li a:link, #amenu-list li a:visited, #amenu-list li a:hover {
+.amenu-list li a:link, .amenu-list li a:visited, .amenu-list li a:hover {
   display: block;
   margin: 0px;
   padding: 0px;
   white-space: nowrap;
 }
 /* line 26, app/stylesheets/amenu.sass */
-#amenu-list ul {
+.amenu-list ul {
   display: none;
   margin: 0px;
   padding: 0px;
@@ -37,7 +37,7 @@
   height: auto;
 }
 /* line 32, app/stylesheets/amenu.sass */
-#amenu-list ul li {
+.amenu-list ul li {
   float: none;
   margin: 0px;
   padding: 0px;
@@ -54,15 +54,15 @@
 }
 
 /* line 47, app/stylesheets/amenu.sass */
-#amenu-list li {
+.amenu-list li {
   height: 40px;
 }
 /* line 49, app/stylesheets/amenu.sass */
-#amenu-list li.parent > a {
+.amenu-list li.parent > a {
   background: url(images/down_arrow.gif) no-repeat 92% 50%;
 }
 /* line 52, app/stylesheets/amenu.sass */
-#amenu-list li a:link, #amenu-list li a:visited {
+.amenu-list li a:link, .amenu-list li a:visited {
   height: 40px;
   line-height: 40px;
   text-decoration: none;
@@ -71,35 +71,35 @@
   border-left: 2px solid #2c272b;
 }
 /* line 59, app/stylesheets/amenu.sass */
-#amenu-list li a:hover, #amenu-list li a.active {
+.amenu-list li a:hover, .amenu-list li a.active {
   color: white;
   background-color: #2e0f21;
   border-left: 2px solid #540532;
 }
 /* line 63, app/stylesheets/amenu.sass */
-#amenu-list ul {
+.amenu-list ul {
   border-left: 2px solid #540532;
 }
 /* line 65, app/stylesheets/amenu.sass */
-#amenu-list ul li {
+.amenu-list ul li {
   height: 30px;
   background-color: #2e0f21;
   border-top: 1px solid #444444;
   border-bottom: 1px solid #090909;
 }
 /* line 70, app/stylesheets/amenu.sass */
-#amenu-list ul li.parent > a {
+.amenu-list ul li.parent > a {
   background: url(images/right_arrow.gif) no-repeat 95% 50%;
 }
 /* line 73, app/stylesheets/amenu.sass */
-#amenu-list ul li a:link, #amenu-list ul li a:visited {
+.amenu-list ul li a:link, .amenu-list ul li a:visited {
   height: 30px;
   line-height: 30px;
   padding: 0px 40px 0px 20px;
   border-left: none;
 }
 /* line 78, app/stylesheets/amenu.sass */
-#amenu-list ul li a:hover, #amenu-list ul li a.active {
+.amenu-list ul li a:hover, .amenu-list ul li a.active {
   background-color: #a80c66;
   color: white;
 }

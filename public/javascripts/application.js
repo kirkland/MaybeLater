@@ -65,3 +65,11 @@ function setupTasksDragDrop(updatePath) {
     }
   }).disableSelection();
 }
+
+function setupTaskMenus() {
+  $('.amenu-list').amenu({
+    'speed': 200,
+    'animation': 'fade'
+  });
+  return 0;
+}

@@ -3,11 +3,10 @@
 %table#tasks
   %thead
     %tr
-      %th Task
+      %th{:colspan => '2'} Task
   %tbody
     =render @tasks
 
 - content_for :js do
   setupTasksIndex("#{reorder_tasks_path}", "#{tasks_path}");
-
-
+  setupTaskMenus();
