@@ -1,24 +1,37 @@
 @import blueprint
 @import blueprint/reset
 @import blueprint/colors
+@import "compass/css3/border-radius"
 
 +blueprint
 
 $blueprint-grid-columns: 24
 $blueprint-grid-width: 30px
 
+html
+  height: 100%
+
 body
   +container
+  height: 100%
   #logo
     +column(24)
   #site_nav
     display: none
-
-  #content
+  #main
+    background-color: #181C21
     +column(24)
-    margin-right: 0px
+    height: 100%
+  #content
+    +column(20)
+    margin: 40px 0px 40px 60px    
+    background-color: white
+    padding: 10px
+    +border-radius(10px)
+    
   font-size: 16px
-
+  background-color: #39414A
+  
 input
   font-size: 20px
 
@@ -45,7 +58,7 @@ input
 
 #new_task
   #task_title_input
-    +column(21)
+    +column(17)
     #task_title
       width: 100%
   #submit_button_li
