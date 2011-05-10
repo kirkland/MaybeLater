@@ -1,0 +1,27 @@
+/* line 1, app/stylesheets/amenu.sass */
+td.amenu-container {
+  width: 40px;
+  padding: 0px;
+  height: 20px;
+  line-height: 20px;
+}
+/* line 6, app/stylesheets/amenu.sass */
+td.amenu-container ul.amenu-list {
+  width: 40px;
+  height: 20px;
+  list-style: none;
+  padding-left: 0px;
+}
+/* line 11, app/stylesheets/amenu.sass */
+td.amenu-container ul.amenu-list li {
+  margin: auto;
+  width: 80%;
+  line-height: 20px;
+  height: 25px;
+  padding-top: 10px;
+}
+/* line 17, app/stylesheets/amenu.sass */
+td.amenu-container ul.amenu-list ul {
+  display: none;
+  list-style: none;
+}
