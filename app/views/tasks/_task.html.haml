@@ -1,15 +1,12 @@
 %tr{'data-id' => task.id}
   %td
     =task.title
-  %td
+  %td{:class => 'amenu-container'}
     %ul{:class => 'amenu-list'}
       %li
-        %a{:href => '#'}
-          Actions
+        %a{:href => '#'} Actions
         %ul
           %li
-            %a{:href => '#'}
-              Complete
+            %a{:href => '#'} Complete
           %li
-            %a{:href => '#'}
-              One Week
+            %a{:href => '#'} One Week
