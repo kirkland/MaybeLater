@@ -9,6 +9,8 @@ gem 'formtastic'
 gem 'compass'
 gem 'inherited_resources'
 gem 'meta_where'
+gem 'barista'
+gem 'json'
 
 group :test do  
 end
