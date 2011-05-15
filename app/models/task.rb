@@ -37,7 +37,7 @@ class Task < ActiveRecord::Base
     end
 
     def ordered_active(user)
-      active.where(:id => user.ordered_task_ids).collect{|x| Task.find(x)}
+      user.ordered_task_ids.collect{|x| Task.find(x)}.select{|x| x.status == 'active'}
     end
 
     def ordered_deferred
