@@ -17,4 +17,22 @@ class Task < ActiveRecord::Base
 
     save!
   end
+
+  class << self
+    def completed
+      where(:status => 'complete')
+    end
+
+    def deferred
+      where(:status => 'deferred')
+    end
+
+    def active
+      where(:status => 'active')
+    end
+
+    def ordered(user)
+      where(:id => user.ordered_task_ids).collect{|x| Task.find(x)}
+    end
+  end
 end
