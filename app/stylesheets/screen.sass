@@ -42,6 +42,17 @@ input
     border: 1px black solid
     &.just_added
       border: 1px black dashed
+  .task_title
+    width: 100%
+  .actions_area
+    +column(4)
+    +last    
+    .actions
+      display: none
+    &:hover .actions
+      display: block
+    &:hover .actions_label
+      display: none
 
 .formtastic
   ol
@@ -71,5 +82,4 @@ input
   li
     float: left
 
-.actions
-  display: none
+

@@ -65,18 +65,3 @@ function setupTasksDragDrop(updatePath) {
     }
   }).disableSelection();
 }
-
-function setupTaskMenus() {
-  $(".actions_area").parent().hover(
-    function() {
-      $(this).find(".actions_label").hide();
-      $(this).find(".actions").show();
-    },
-    function () {
-      $(this).find(".actions_label").show();
-      $(this).find(".actions").hide();
-    }
-  );
-
-  return 0;
-}
