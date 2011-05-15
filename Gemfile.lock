@@ -61,6 +61,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_where (0.9.9.2)
+      activerecord (~> 3.0.2)
+      activesupport (~> 3.0.2)
+      arel (~> 2.0.2)
     mime-types (1.16)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -103,6 +107,7 @@ DEPENDENCIES
   formtastic
   haml-rails
   inherited_resources
+  meta_where
   rails
   rails3-generators
   sass

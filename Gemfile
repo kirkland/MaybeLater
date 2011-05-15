@@ -8,6 +8,7 @@ gem 'authlogic', :git => 'http://github.com/binarylogic/authlogic.git'
 gem 'formtastic'
 gem 'compass'
 gem 'inherited_resources'
+gem 'meta_where'
 
 group :test do  
 end

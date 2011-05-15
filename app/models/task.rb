@@ -31,8 +31,17 @@ class Task < ActiveRecord::Base
       where(:status => 'active')
     end
 
+    # TODO: ordered_completed order by completed_at
     def ordered(user)
-      where(:id => user.ordered_task_ids).collect{|x| Task.find(x)}
+      ordered_active(user) + ordered_deferred
+    end
+
+    def ordered_active(user)
+      active.where(:id => user.ordered_task_ids).collect{|x| Task.find(x)}
+    end
+
+    def ordered_deferred
+      deferred.order('remind_at DESC')
     end
   end
 end
