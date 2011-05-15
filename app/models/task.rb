@@ -33,7 +33,7 @@ class Task < ActiveRecord::Base
     end
 
     def ordered(user)
-      ordered_active(user) + ordered_deferred + ordered_completed
+      ordered_active(user)# + ordered_deferred + ordered_completed
     end
 
     def ordered_active(user)

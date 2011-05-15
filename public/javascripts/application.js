@@ -15,6 +15,11 @@ function insertNewTask(title, id) {
   return newRow;
 }
 
+function setupNewRow(newRow) {
+  newRow.attr('data-id', data.task.id);
+  newRow.find('td').removeClass('just_added');
+}
+
 function setupNewTaskForm(createPath) {
   $('#task_submit').click(event, function () {
     event.preventDefault();
@@ -30,8 +35,7 @@ function setupNewTaskForm(createPath) {
       data: ajaxData,
       success: function(data) {
 //        console.log(data);
-        newRow.attr('data-id', data.task.id);
-        newRow.find('td').removeClass('just_added');
+        setupNewRow(newRow);
       },
       error: function(data) {
         //          console.log("error"); 

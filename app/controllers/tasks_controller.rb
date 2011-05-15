@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @task = Task.new
-    @tasks = @user.tasks.active.ordered(@user)
+    @tasks = @user.tasks.ordered(@user)
   end
 
   def create
