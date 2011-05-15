@@ -3,6 +3,18 @@ function setupTasksIndex(updatePath, createPath) {
   setupNewTaskForm(createPath);
 }
 
+function insertNewTask(title, id) {
+  var taskData = {
+    title: title,
+    'id': id
+  };
+
+  var newRow = $('.task_template').clone().directives({'.task_title': 'title', '@data-id': 'id'}).render(taskData).removeClass('task_template');
+  $('#tasks tbody').prepend(newRow);
+
+  return newRow;
+}
+
 function setupNewTaskForm(createPath) {
   $('#task_submit').click(event, function () {
     event.preventDefault();
@@ -11,9 +23,7 @@ function setupNewTaskForm(createPath) {
     $('#task_title').val('');
 
     // add new row immediately. we'll populate data-id when AJAX returns
-    var newRow = $('#tasks tbody tr').first().clone();
-    newRow.attr('data-id', '').find('td').html(title).addClass('just_added');
-    $('#tasks tbody').prepend(newRow);
+    var newRow = insertNewTask(title);
     
     $.ajax(createPath, {
       type: 'POST',

@@ -1354,30 +1354,34 @@ input {
 #tasks .actions_area:hover .actions_label {
   display: none;
 }
+/* line 56, app/stylesheets/screen.sass */
+#tasks .task_template {
+  display: none;
+}
 
-/* line 58, app/stylesheets/screen.sass */
+/* line 60, app/stylesheets/screen.sass */
 .formtastic ol {
   padding-left: 0;
   margin: 0;
 }
-/* line 61, app/stylesheets/screen.sass */
+/* line 63, app/stylesheets/screen.sass */
 .formtastic ol li {
   list-style: none;
 }
-/* line 63, app/stylesheets/screen.sass */
+/* line 65, app/stylesheets/screen.sass */
 .formtastic fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
-/* line 67, app/stylesheets/screen.sass */
+/* line 69, app/stylesheets/screen.sass */
 .formtastic .submit_button {
   padding: 5px;
   margin: 0.5em 0;
   border-width: 1px;
 }
 
-/* line 73, app/stylesheets/screen.sass */
+/* line 75, app/stylesheets/screen.sass */
 #new_task #task_title_input {
   display: inline;
   float: left;
@@ -1388,11 +1392,11 @@ input {
 * html #new_task #task_title_input {
   overflow-x: hidden;
 }
-/* line 75, app/stylesheets/screen.sass */
+/* line 77, app/stylesheets/screen.sass */
 #new_task #task_title_input #task_title {
   width: 100%;
 }
-/* line 77, app/stylesheets/screen.sass */
+/* line 79, app/stylesheets/screen.sass */
 #new_task #submit_button_li {
   display: inline;
   float: left;
@@ -1404,11 +1408,11 @@ input {
 * html #new_task #submit_button_li {
   overflow-x: hidden;
 }
-/* line 80, app/stylesheets/screen.sass */
+/* line 82, app/stylesheets/screen.sass */
 #new_task #submit_button_li .submit_button {
   width: 100%;
 }
-/* line 82, app/stylesheets/screen.sass */
+/* line 84, app/stylesheets/screen.sass */
 #new_task li {
   float: left;
 }
