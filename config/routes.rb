@@ -5,6 +5,9 @@ MaybeLater::Application.routes.draw do
   resources :user_sessions
 
   resources :tasks do
+    member do
+      post :update_status
+    end
     collection do
       post :reorder
     end

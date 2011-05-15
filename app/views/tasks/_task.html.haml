@@ -3,6 +3,6 @@
   %td{:class => 'actions_area'}
     .actions_label Actions
     .actions
-      =link_to 'Complete', '#'
+      =link_to 'Complete', '#', :onclick => %{updateStatus("#{update_status_task_path(task)}", #{task.id}, 0)}
       =link_to 'Day', '#'
       =link_to 'Week', '#'

@@ -65,3 +65,19 @@ function setupTasksDragDrop(updatePath) {
     }
   }).disableSelection();
 }
+
+function updateStatus(ajax_path, task_id, defer_time) {
+  $.ajax(ajax_path, {
+    type: 'POST',
+    data: {
+      task_id: task_id,
+      defer_time: defer_time
+    },
+    success: function(data) {
+//      console.log(data);
+    },
+    error: function(data) {
+//      console.log(data.responseText);
+    }
+  });
+}
