@@ -67,6 +67,8 @@ function setupTasksDragDrop(updatePath) {
 }
 
 function updateStatus(ajax_path, task_id, defer_time) {
+  $(event.target).closest('tr').remove();
+  
   $.ajax(ajax_path, {
     type: 'POST',
     data: {
