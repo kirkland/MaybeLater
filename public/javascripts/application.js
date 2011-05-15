@@ -1,6 +1,9 @@
-function setupTasksIndex(updatePath, createPath) {
+function setupTasksIndex(updatePath, createPath, updateStatusTaskPath) {
   setupTasksDragDrop(updatePath);
   setupNewTaskForm(createPath);
+  
+  updateStatusTaskPath = updateStatusTaskPath;
+//  console.log(updateStatusTaskPath);
 }
 
 function insertNewTask(title, id) {
@@ -16,8 +19,10 @@ function insertNewTask(title, id) {
 }
 
 function setupNewRow(newRow) {
-  newRow.attr('data-id', data.task.id);
-  newRow.find('td').removeClass('just_added');
+  newRow.find('.actions .complete_link').click(event, function() {
+    event.preventDefault();
+    updateStatus(Ssomeargshere);
+  });            
 }
 
 function setupNewTaskForm(createPath) {
@@ -34,12 +39,11 @@ function setupNewTaskForm(createPath) {
       type: 'POST',
       data: ajaxData,
       success: function(data) {
-//        console.log(data);
+        newRow.find('td').removeClass('just_added');
+        newRow.attr('data-id', data.task.id);
         setupNewRow(newRow);
       },
       error: function(data) {
-        //          console.log("error"); 
-        //          console.log(data);
       }
     });
   });
