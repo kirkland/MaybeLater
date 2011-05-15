@@ -10,9 +10,10 @@ class Task < ActiveRecord::Base
   def update_status(defer_time)
     if defer_time == 0 # magic number which means task completed
       self.status = 'completed'
+      self.completed_at = Time.now
     else
       self.status = 'deferred'
-#      self.remind_at = Time.now + defer_time
+      self.remind_at = Time.now + defer_time
     end
 
     save!
@@ -31,9 +32,8 @@ class Task < ActiveRecord::Base
       where(:status => 'active')
     end
 
-    # TODO: ordered_completed order by completed_at
     def ordered(user)
-      ordered_active(user) + ordered_deferred
+      ordered_active(user) + ordered_deferred + ordered_completed
     end
 
     def ordered_active(user)
@@ -42,6 +42,10 @@ class Task < ActiveRecord::Base
 
     def ordered_deferred
       deferred.order('remind_at DESC')
+    end
+
+    def ordered_completed
+      completed.order('completed_at DESC')
     end
   end
 end
