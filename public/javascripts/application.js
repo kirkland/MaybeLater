@@ -56,20 +56,20 @@ function setupTasksDragDrop(updatePath) {
     tolerance: 'pointer',
 
     update: function(event, ui) { 
-      var newTasksOrder = $.map($('#tasks tr'), function(t) {
+      var newTasksOrder = $.map($('#tasks tr').not('.task_template'), function(t) {
         return $(t).attr('data-id');
       });
-      //      console.log(newTasksOrder);
+      console.log(newTasksOrder);
       $.ajax(updatePath, {
         type: 'POST',
         data: {
          ordered_task_ids: newTasksOrder
         },
         success: function(data) {
-//          console.log(data);
+          console.log(data);
         },
         error: function () {
-      //          console.log("something went wrong");
+                console.log("something went wrong");
         }
       });
     }
