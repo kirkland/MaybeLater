@@ -67,9 +67,16 @@ function setupTasksDragDrop(updatePath) {
 }
 
 function setupTaskMenus() {
-  $('.amenu-list').amenu({
-    'speed': 200,
-    'animation': 'fade'
-  });
+  $(".actions_area").parent().hover(
+    function() {
+      $(this).find(".actions_label").hide();
+      $(this).find(".actions").show();
+    },
+    function () {
+      $(this).find(".actions_label").show();
+      $(this).find(".actions").hide();
+    }
+  );
+
   return 0;
 }

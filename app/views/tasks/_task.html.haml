@@ -1,11 +1,8 @@
 %tr{'data-id' => task.id}
   %td=task.title
-  %td{:class => 'amenu-container'}
-    %ul{:class => 'amenu-list'}
-      %li
-        %a{:href => '#'} Actions
-        %ul
-          %li
-            %a{:href => '#'} Complete
-          %li
-            %a{:href => '#'} One Week
+  %td{:class => 'actions_area'}
+    .actions_label Actions
+    .actions
+      =link_to 'Complete', '#'
+      =link_to 'Day', '#'
+      =link_to 'Week', '#'
