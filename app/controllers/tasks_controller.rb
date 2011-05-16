@@ -8,7 +8,7 @@ class TasksController < ApplicationController
 
   def create
     t = Task.create!(params[:task].merge(:user => @user))
-    render :json => t
+    render :json => {:task => t.attributes.merge(:update_path => update_status_task_path(t))}
   end
 
   def update

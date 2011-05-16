@@ -1,4 +1,4 @@
-%tr{'data-id' => task.id, :class => 'task_row'}
+%tr{'data-id' => task.id, 'data-update_path' => update_status_task_path(task), :class => 'task_row'}
   %td{:class => 'task_title'}=task.title
   %td{:class => 'actions_area'}
     .actions_label Actions

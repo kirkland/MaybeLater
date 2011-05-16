@@ -6,7 +6,7 @@
       %th{:colspan => '2'} Task
   %tbody
     =render @tasks
-    %tr{:class => 'task_template task_row', 'data-id' => ''}
+    %tr{:class => 'task_template task_row', 'data-id' => '', 'data-update_path' => ''}
       %td{:class => 'task_title just_added'}
       %td{:class => 'actions_area'}
         .actions_label Actions
@@ -16,4 +16,4 @@
           =link_to 'Week', '#'
 
 - content_for :js do
-  setupTasksIndex("#{reorder_tasks_path}", "#{tasks_path}", "#{update_status_task_path(0)}");
+  setupTasksIndex("#{reorder_tasks_path}", "#{tasks_path}");

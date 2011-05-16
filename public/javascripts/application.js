@@ -1,9 +1,6 @@
-function setupTasksIndex(updatePath, createPath, updateStatusTaskPath) {
+function setupTasksIndex(updatePath, createPath) {
   setupTasksDragDrop(updatePath);
   setupNewTaskForm(createPath);
-  
-  updateStatusTaskPath = updateStatusTaskPath;
-//  console.log(updateStatusTaskPath);
 }
 
 function insertNewTask(title, id) {
@@ -18,10 +15,14 @@ function insertNewTask(title, id) {
   return newRow;
 }
 
-function setupNewRow(newRow) {
+function setupNewRow(newRow, id, updatePath) {
+  newRow.attr('data-id', id);
+  newRow.attr('data-update_path', updatePath);
+  newRow.find('td').removeClass('just_added');
+
   newRow.find('.actions .complete_link').click(event, function() {
     event.preventDefault();
-    updateStatus(Ssomeargshere);
+//    updateStatus(Ssomeargshere);
   });            
 }
 
@@ -32,16 +33,14 @@ function setupNewTaskForm(createPath) {
     var title = $('#task_title').val();
     $('#task_title').val('');
 
-    // add new row immediately. we'll populate data-id when AJAX returns
+    // add new row immediately. we'll populate data attributes when AJAX returns
     var newRow = insertNewTask(title);
     
     $.ajax(createPath, {
       type: 'POST',
       data: ajaxData,
       success: function(data) {
-        newRow.find('td').removeClass('just_added');
-        newRow.attr('data-id', data.task.id);
-        setupNewRow(newRow);
+        setupNewRow(newRow, data.task.id, data.task.update_path);
       },
       error: function(data) {
       }
