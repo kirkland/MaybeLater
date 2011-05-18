@@ -1,6 +1,11 @@
 function setupTasksIndex(updatePath, createPath) {
   setupTasksDragDrop(updatePath);
   setupNewTaskForm(createPath);
+
+  // set up complete/other links for each existing row
+  $.each($('#tasks tr'), function(index, row) {
+    setupNewRow($(row));
+  });
 }
 
 function insertNewTask(title, id) {
@@ -15,14 +20,36 @@ function insertNewTask(title, id) {
   return newRow;
 }
 
+function updateStatus(ajax_path, task_id, defer_time) {
+  $(event.target).closest('tr').remove();
+  
+  $.ajax(ajax_path, {
+    type: 'POST',
+    data: {
+      task_id: task_id,
+      defer_time: defer_time
+    },
+    success: function(data) {
+     // console.log(data);
+    },
+    error: function(data) {
+     // console.log(data.responseText);
+    }
+  });
+}
+
 function setupNewRow(newRow, id, updatePath) {
-  newRow.attr('data-id', id);
-  newRow.attr('data-update_path', updatePath);
-  newRow.find('td').removeClass('just_added');
+  // this first part is only applicable for rows added dynamically
+  if (id) {
+    newRow.attr('data-id', id);
+    newRow.attr('data-update_path', updatePath);
+    newRow.find('td').removeClass('just_added');
+  }
 
   newRow.find('.actions .complete_link').click(event, function() {
     event.preventDefault();
-//    updateStatus(Ssomeargshere);
+
+    updateStatus(newRow.attr('data-update_path'), newRow.attr('data-id'), 0);
   });            
 }
 
@@ -81,22 +108,4 @@ function setupTasksDragDrop(updatePath) {
       });
     }
   }).disableSelection();
-}
-
-function updateStatus(ajax_path, task_id, defer_time) {
-  $(event.target).closest('tr').remove();
-  
-  $.ajax(ajax_path, {
-    type: 'POST',
-    data: {
-      task_id: task_id,
-      defer_time: defer_time
-    },
-    success: function(data) {
-//      console.log(data);
-    },
-    error: function(data) {
-//      console.log(data.responseText);
-    }
-  });
 }

@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(:version => 20110515124017) do
 
   create_table "tasks", :force => true do |t|
     t.string   "title",        :limit => 256
+    t.integer  "user_id",                                           :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
     t.text     "content"
     t.string   "status",       :limit => 32,  :default => "active"
     t.datetime "remind_at"
