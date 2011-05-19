@@ -1328,19 +1328,12 @@ input {
 }
 /* line 45, app/stylesheets/screen.sass */
 #tasks .task_title {
-  width: 100%;
+  width: 640px;
 }
 /* line 47, app/stylesheets/screen.sass */
 #tasks .actions_area {
-  display: inline;
-  float: left;
-  margin-right: 10px;
   width: 150px;
   margin-right: 0;
-}
-/* line 138, ../../../../.gem/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #tasks .actions_area {
-  overflow-x: hidden;
 }
 /* line 50, app/stylesheets/screen.sass */
 #tasks .actions_area .actions {
