@@ -8,7 +8,7 @@ class @TasksIndex
     ui
 
   setupTasksDragDrop: ->
-    $('#tasks tbody').sortable
+    $('#tasks tbody').sortable(
       items: 'tr',
       helper: @fixHelper,
       containment: "#tasks tbody",
@@ -20,3 +20,4 @@ class @TasksIndex
           type: 'POST',
           data:
             ordered_task_ids: newTasksOrder
+    ).disableSelection();

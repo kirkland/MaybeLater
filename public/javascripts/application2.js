@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 19 May 2011 17:01:34 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 19 May 2011 17:05:00 GMT from
  * /home/rob/code/maybe_later/app/coffeescripts/application2.coffee
  */
 
@@ -33,7 +33,7 @@
             }
           });
         }, this)
-      });
+      }).disableSelection();
     };
     return TasksIndex;
   })();
