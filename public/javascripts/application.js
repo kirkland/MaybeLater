@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 19 May 2011 17:55:34 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 19 May 2011 18:52:35 GMT from
  * /home/rob/code/maybe_later/app/coffeescripts/application.coffee
  */
 
@@ -10,6 +10,9 @@
       this.createPath = createPath;
       this.setupTasksDragDrop();
       this.setupNewTaskForm();
+      $.each($('#tasks tbody tr'), __bind(function(i, ele) {
+        return this.setupNewRow($(ele));
+      }, this));
       $('#task_title').focus();
     }
     TasksIndex.prototype.setupTasksDragDrop = function() {
@@ -54,7 +57,17 @@
     };
     TasksIndex.prototype.setupNewRow = function(newRow) {
       return newRow.find('.actions .complete_link').click(event, function() {
-        return event.preventDefault();
+        event.preventDefault();
+        newRow.remove();
+        return $.ajax(newRow.attr('data-update_path'), {
+          type: 'POST',
+          data: {
+            task_id: newRow.attr('data-id'),
+            defer_time: 0
+          },
+          success: __bind(function(data) {}, this),
+          error: __bind(function(data) {}, this)
+        });
       });
     };
     TasksIndex.prototype.setupNewTaskForm = function() {
@@ -70,7 +83,7 @@
           data: ajaxData,
           success: __bind(function(data) {
             newRow.attr('data-id', data.task.id);
-            newRow.attr('data-update_path', data.task.updatePath);
+            newRow.attr('data-update_path', data.task.update_path);
             newRow.find('td').removeClass('just_added');
             return this.setupNewRow(newRow);
           }, this),

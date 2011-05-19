@@ -2,6 +2,7 @@ class @TasksIndex
   constructor: (@reorderPath, @createPath) ->
     @setupTasksDragDrop()
     @setupNewTaskForm()
+    $.each $('#tasks tbody tr'), (i, ele) => @setupNewRow $(ele)
     $('#task_title').focus()
 
   setupTasksDragDrop: ->
@@ -36,6 +37,14 @@ class @TasksIndex
   setupNewRow: (newRow) ->
     newRow.find('.actions .complete_link').click event, () ->
       event.preventDefault();
+      newRow.remove()
+      $.ajax newRow.attr('data-update_path'),
+        type: 'POST',
+        data:
+          task_id: newRow.attr('data-id'),
+          defer_time: 0
+        success: (data) =>
+        error: (data) =>
 
   setupNewTaskForm: ->
     $('#task_submit').click event, () =>
@@ -51,7 +60,7 @@ class @TasksIndex
         data: ajaxData,
         success: (data) =>
           newRow.attr('data-id', data.task.id)
-          newRow.attr('data-update_path', data.task.updatePath)
+          newRow.attr('data-update_path', data.task.update_path)
           newRow.find('td').removeClass('just_added')
           @setupNewRow newRow
         error: (data) ->
