@@ -1,5 +1,4 @@
 function setupTasksIndex(updatePath, createPath) {
-//  setupTasksDragDrop(updatePath);
   setupNewTaskForm(createPath);
 }
 
@@ -48,40 +47,6 @@ function setupNewTaskForm(createPath) {
   });
 }
 
-var fixHelper = function(e, ui) {
-  ui.children().each(function() {
-      $(this).width($(this).width());
-    });
-  return ui;
-};
-
-function setupTasksDragDrop(updatePath) {
-  $('#tasks tbody').sortable({
-    items: 'tr',
-    helper: fixHelper,
-    containment: "#tasks tbody",
-    tolerance: 'pointer',
-
-    update: function(event, ui) { 
-      var newTasksOrder = $.map($('#tasks tr').not('.task_template'), function(t) {
-        return $(t).attr('data-id');
-      });
-//      console.log(newTasksOrder);
-      $.ajax(updatePath, {
-        type: 'POST',
-        data: {
-         ordered_task_ids: newTasksOrder
-        },
-        success: function(data) {
-//          console.log(data);
-        },
-        error: function () {
-//                console.log("something went wrong");
-        }
-      });
-    }
-  }).disableSelection();
-}
 
 function updateStatus(ajax_path, task_id, defer_time) {
   $(event.target).closest('tr').remove();

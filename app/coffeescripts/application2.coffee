@@ -2,15 +2,15 @@ class @TasksIndex
   constructor: (@reorderPath) ->
     @setupTasksDragDrop()
 
-  fixHelper: (e, ui) ->
-    ui.children().each ->
-      $(this).width($(this).width())
-    ui
-
   setupTasksDragDrop: ->
+    fixHelper = (e, ui) ->
+      ui.children().each ->
+        $(this).width($(this).width())
+      ui
+
     $('#tasks tbody').sortable(
       items: 'tr',
-      helper: @fixHelper,
+      helper: fixHelper,
       containment: "#tasks tbody",
       tolerance: 'pointer',
       update: (event, ui) =>

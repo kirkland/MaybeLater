@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Thu, 19 May 2011 17:05:00 GMT from
+/* DO NOT MODIFY. This file was compiled Thu, 19 May 2011 17:07:39 GMT from
  * /home/rob/code/maybe_later/app/coffeescripts/application2.coffee
  */
 
@@ -9,16 +9,17 @@
       this.reorderPath = reorderPath;
       this.setupTasksDragDrop();
     }
-    TasksIndex.prototype.fixHelper = function(e, ui) {
-      ui.children().each(function() {
-        return $(this).width($(this).width());
-      });
-      return ui;
-    };
     TasksIndex.prototype.setupTasksDragDrop = function() {
+      var fixHelper;
+      fixHelper = function(e, ui) {
+        ui.children().each(function() {
+          return $(this).width($(this).width());
+        });
+        return ui;
+      };
       return $('#tasks tbody').sortable({
         items: 'tr',
-        helper: this.fixHelper,
+        helper: fixHelper,
         containment: "#tasks tbody",
         tolerance: 'pointer',
         update: __bind(function(event, ui) {
