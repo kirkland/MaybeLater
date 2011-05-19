@@ -1336,49 +1336,53 @@ input {
   margin-right: 0;
 }
 /* line 50, app/stylesheets/screen.sass */
+#tasks .actions_area div {
+  width: inherit;
+}
+/* line 52, app/stylesheets/screen.sass */
 #tasks .actions_area .actions {
   display: none;
 }
-/* line 52, app/stylesheets/screen.sass */
+/* line 54, app/stylesheets/screen.sass */
+#tasks .actions_area .actions div {
+  display: inline;
+}
+/* line 56, app/stylesheets/screen.sass */
 #tasks .actions_area:hover .actions {
   display: block;
 }
-/* line 54, app/stylesheets/screen.sass */
+/* line 58, app/stylesheets/screen.sass */
 #tasks .actions_area:hover .actions_label {
   display: none;
 }
-/* line 56, app/stylesheets/screen.sass */
-#tasks .actions_area div {
-  display: inline;
-}
-/* line 58, app/stylesheets/screen.sass */
+/* line 60, app/stylesheets/screen.sass */
 #tasks .task_template {
   display: none;
 }
 
-/* line 62, app/stylesheets/screen.sass */
+/* line 64, app/stylesheets/screen.sass */
 .formtastic ol {
   padding-left: 0;
   margin: 0;
 }
-/* line 65, app/stylesheets/screen.sass */
+/* line 67, app/stylesheets/screen.sass */
 .formtastic ol li {
   list-style: none;
 }
-/* line 67, app/stylesheets/screen.sass */
+/* line 69, app/stylesheets/screen.sass */
 .formtastic fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
-/* line 71, app/stylesheets/screen.sass */
+/* line 73, app/stylesheets/screen.sass */
 .formtastic .submit_button {
   padding: 5px;
   margin: 0.5em 0;
   border-width: 1px;
 }
 
-/* line 77, app/stylesheets/screen.sass */
+/* line 79, app/stylesheets/screen.sass */
 #new_task #task_title_input {
   display: inline;
   float: left;
@@ -1389,11 +1393,11 @@ input {
 * html #new_task #task_title_input {
   overflow-x: hidden;
 }
-/* line 79, app/stylesheets/screen.sass */
+/* line 81, app/stylesheets/screen.sass */
 #new_task #task_title_input #task_title {
   width: 100%;
 }
-/* line 81, app/stylesheets/screen.sass */
+/* line 83, app/stylesheets/screen.sass */
 #new_task #submit_button_li {
   display: inline;
   float: left;
@@ -1405,11 +1409,11 @@ input {
 * html #new_task #submit_button_li {
   overflow-x: hidden;
 }
-/* line 84, app/stylesheets/screen.sass */
+/* line 86, app/stylesheets/screen.sass */
 #new_task #submit_button_li .submit_button {
   width: 100%;
 }
-/* line 86, app/stylesheets/screen.sass */
+/* line 88, app/stylesheets/screen.sass */
 #new_task li {
   float: left;
 }

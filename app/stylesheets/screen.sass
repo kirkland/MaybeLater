@@ -47,14 +47,16 @@ input
   .actions_area
     width: 160px
     +last
+    div
+      width: inherit    
     .actions
       display: none
+      div
+        display: inline
     &:hover .actions
       display: block
     &:hover .actions_label
       display: none
-    div
-      display: inline
   .task_template
     display: none
 
