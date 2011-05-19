@@ -1,5 +1,5 @@
 function setupTasksIndex(updatePath, createPath) {
-  setupTasksDragDrop(updatePath);
+//  setupTasksDragDrop(updatePath);
   setupNewTaskForm(createPath);
 }
 
