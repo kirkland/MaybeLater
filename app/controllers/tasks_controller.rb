@@ -24,7 +24,6 @@ class TasksController < ApplicationController
     task = @user.tasks.find(params[:task_id].to_i)
     task.update_status(params[:defer_time].to_i)
     render :text => params.inspect and return
-#    render :json => task
   end
 
   private
