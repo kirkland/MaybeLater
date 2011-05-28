@@ -43,12 +43,16 @@ input
     &.just_added
       border: 1px black dashed
   .task_title
-    width: 100%
+    width: 630px
   .actions_area
-    +column(4)
+    width: 160px
     +last
+    div
+      width: inherit    
     .actions
       display: none
+      div
+        display: inline
     &:hover .actions
       display: block
     &:hover .actions_label
