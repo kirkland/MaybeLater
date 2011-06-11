@@ -19,6 +19,12 @@ class Task < ActiveRecord::Base
     save!
   end
 
+  def reactivate!
+    self.status = 'active'
+    self.remind_at = nil
+    save!
+  end
+
   class << self
     def completed
       where(:status => 'complete')
@@ -46,6 +52,10 @@ class Task < ActiveRecord::Base
 
     def ordered_completed
       completed.order('completed_at DESC')
+    end
+
+    def reset_old_deferred_tasks
+      Task.where(:status => 'deferred').where(:remind_at.lt => Time.now).update_all(["status = ?, remind_at = ?", 'active', nil])
     end
   end
 end
