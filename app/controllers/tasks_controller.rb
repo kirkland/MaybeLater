@@ -22,7 +22,7 @@ class TasksController < ApplicationController
 
   def update_status
     task = @user.tasks.find(params[:task_id].to_i)
-    task.update_status(params[:defer_time].to_i)
+    task.update_status(params[:defer_days].to_i)
     render :text => params.inspect and return
   end
 

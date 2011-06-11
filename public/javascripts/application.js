@@ -1,5 +1,5 @@
-/* DO NOT MODIFY. This file was compiled Thu, 19 May 2011 18:52:35 GMT from
- * /home/rob/code/maybe_later/app/coffeescripts/application.coffee
+/* DO NOT MODIFY. This file was compiled Sat, 11 Jun 2011 19:01:08 GMT from
+ * /home/rob/c/maybe_later/app/coffeescripts/application.coffee
  */
 
 (function() {
@@ -56,17 +56,39 @@
       return newRow;
     };
     TasksIndex.prototype.setupNewRow = function(newRow) {
-      return newRow.find('.actions .complete_link').click(event, function() {
+      newRow.find('.actions .complete_link').click(event, function() {
         event.preventDefault();
         newRow.remove();
         return $.ajax(newRow.attr('data-update_path'), {
           type: 'POST',
           data: {
             task_id: newRow.attr('data-id'),
-            defer_time: 0
+            defer_days: 0
           },
           success: __bind(function(data) {}, this),
           error: __bind(function(data) {}, this)
+        });
+      });
+      newRow.find('.actions .defer_day_link').click(event, function() {
+        event.preventDefault();
+        newRow.remove();
+        return $.ajax(newRow.attr('data-update_path'), {
+          type: 'POST',
+          data: {
+            task_id: newRow.attr('data-id'),
+            defer_days: 1
+          }
+        });
+      });
+      return newRow.find('.actions .defer_week_link').click(event, function() {
+        event.preventDefault();
+        newRow.remove();
+        return $.ajax(newRow.attr('data-update_path'), {
+          type: 'POST',
+          data: {
+            task_id: newRow.attr('data-id'),
+            defer_days: 7
+          }
         });
       });
     };

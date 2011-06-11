@@ -7,13 +7,13 @@ class Task < ActiveRecord::Base
     user.update_attribute(:ordered_task_ids, user.ordered_task_ids.unshift(id))
   end
 
-  def update_status(defer_time)
-    if defer_time == 0 # magic number which means task completed
+  def update_status(defer_days)
+    if defer_days == 0 # magic number which means task completed
       self.status = 'completed'
       self.completed_at = Time.now
     else
       self.status = 'deferred'
-      self.remind_at = Time.now + defer_time
+      self.remind_at = Time.now + defer_days.days
     end
 
     save!

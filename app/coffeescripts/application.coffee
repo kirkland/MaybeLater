@@ -42,9 +42,25 @@ class @TasksIndex
         type: 'POST',
         data:
           task_id: newRow.attr('data-id'),
-          defer_time: 0
+          defer_days: 0
         success: (data) =>
         error: (data) =>
+    newRow.find('.actions .defer_day_link').click event, () ->
+      event.preventDefault();
+      newRow.remove();
+      $.ajax newRow.attr('data-update_path'),
+        type: 'POST',
+        data:
+          task_id: newRow.attr('data-id'),
+          defer_days: 1
+    newRow.find('.actions .defer_week_link').click event, () ->
+      event.preventDefault();
+      newRow.remove();
+      $.ajax newRow.attr('data-update_path'),
+        type: 'POST',
+        data:
+          task_id: newRow.attr('data-id'),
+          defer_days: 7
 
   setupNewTaskForm: ->
     $('#task_submit').click event, () =>
