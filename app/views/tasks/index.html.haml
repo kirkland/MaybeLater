@@ -12,8 +12,8 @@
         .actions_label Actions
         .actions
           .complete_link=link_to 'Complete', '#'
-          =link_to 'Day', '#'
-          =link_to 'Week', '#'
+          .defer_day_link=link_to 'Day', '#'
+          .defer_week_link=link_to 'Week', '#'
 
 - content_for :js do
   new TasksIndex("#{reorder_tasks_path}", "#{tasks_path}");
