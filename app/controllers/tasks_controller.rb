@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_filter :find_user, :only => [:index, :reorder, :create, :update_status]
+  before_filter :find_or_create_user, :only => [:index, :reorder, :create, :update_status]
 
   def index
     @task = Task.new
@@ -28,8 +28,15 @@ class TasksController < ApplicationController
 
   private
 
-  def find_user
+  def find_or_create_user
     @user = current_user
-    redirect_to login_path if @user.nil?
+    if @user.nil?
+      random_password = random_string
+      redirect_to 'users#create', params => {:user => {:password => random_password, :password_confirmation => random_password, :username => random_string, :email => "#{random_string}@example.com"}}
+    end
+  end
+
+  def random_string
+    (0...8).map{97.+(rand(25)).chr}.join
   end
 end
