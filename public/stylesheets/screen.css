@@ -1417,3 +1417,14 @@ input {
 #new_task li {
   float: left;
 }
+
+/* line 91, app/stylesheets/screen.sass */
+#info {
+  border: 1px black solid;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: #ffef65;
+}
