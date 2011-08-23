@@ -1,4 +1,4 @@
-== Maybe Later
+h1. Maybe Later
 
 Maybe Later is a simple and incomplete TODO app. It has two features that I would like to see in rememberthemilk.com, which I use regularly: 
 
@@ -8,6 +8,6 @@ Maybe Later is a simple and incomplete TODO app. It has two features that I woul
 
 When you first go to the app, a random username will be created for you, with a random password. You won't know what these are. This is just to make it easy to quickly demo this app, and in fact makes it much less useful for actual use.
 
-See it in action at: http://maybe-later.heroku.com
+See it in action at: <a href='http://maybe-later.heroku.com'>http://maybe-later.heroku.com</a>
 
 I probably won't be working on this project anymore, as it was mostly just a way for me to practice my CSS, JavaScript, and Rails.
