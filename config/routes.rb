@@ -13,7 +13,7 @@ MaybeLater::Application.routes.draw do
     end
   end
 
-  match 'automatic_create' => "users#create"
+  match 'automatic_create' => "users#automatic_create"
 
   root :to => 'tasks#index'
 end
