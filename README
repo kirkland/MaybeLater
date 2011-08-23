@@ -1,10 +1,9 @@
-== Generic App
+== Maybe Later
 
-I am making this app for me only, but would be very pleased if anyone else found it useful. I created this app because there are some common tasks I always do when starting a new Rails project. I want instead to automate the following:
+Maybe Later is a simple and incomplete TODO app. It has two features that I would like to see in rememberthemilk.com, which I use regularly: 
 
--- commonly used gems
--- setting up Authlogic
--- set up HAML and SASS
--- include very basic CSS, layout view, and some authentication views
+1) A specific ordering of tasks (remember the milk will only allow you to set 4 levels of priorities)
 
-This app is setup with the name GenericApp, so after cloning it, you'll want to replace any occurence of GenericApp with YourAppName, and geneneric_app with your_app_name. Included is a simple ruby program, setup.rb, which will accomplish this. Simply run it, and pass as a parameter your app name, in CamelCase. For example: ./setup.rb MyAwesomeApp
+2) The ability to defer tasks to some time in the future. The reason I want this second feature is because often, I know I won't be working on a task for a while, and would prefer not to see it every time I log in. Right now, there are links to defer a task for one day or one week. Once you click on one of these links for a task, they will disappear from the view, and theoretically will show up again sometime later. I say theoretically, because this feature is incomplete. While the time to bring the task back is recorded, there is nothing implemented which will actually bring it back.
+
+I probably won't be working on this project anymore, as it was mostly just a way for me to practice my CSS, JavaScript, and Rails.
