@@ -6,4 +6,8 @@ Maybe Later is a simple and incomplete TODO app. It has two features that I woul
 
 2) The ability to defer tasks to some time in the future. The reason I want this second feature is because often, I know I won't be working on a task for a while, and would prefer not to see it every time I log in. Right now, there are links to defer a task for one day or one week. Once you click on one of these links for a task, they will disappear from the view, and theoretically will show up again sometime later. I say theoretically, because this feature is incomplete. While the time to bring the task back is recorded, there is nothing implemented which will actually bring it back.
 
+When you first go to the app, a random username will be created for you, with a random password. You won't know what these are. This is just to make it easy to quickly demo this app, and in fact makes it much less useful for actual use.
+
+See it in action at: http://maybe-later.heroku.com
+
 I probably won't be working on this project anymore, as it was mostly just a way for me to practice my CSS, JavaScript, and Rails.
