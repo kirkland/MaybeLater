@@ -18,9 +18,9 @@ class UsersController < ApplicationController
 
   def automatic_create
     random_password = random_string
-    @user = User.new({:password => random_password, :password_confirmation => random_password, :username => random_string, :email => "#{random_string}@example.com"})
+    @user = User.create!({:password => random_password, :password_confirmation => random_password, :username => random_string, :email => "#{random_string}@example.com"})
     sign_in(@user)
-    redirect_to root_path
+    redirect_to root_path and return
   end
 
   def edit

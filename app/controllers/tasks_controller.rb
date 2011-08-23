@@ -31,7 +31,7 @@ class TasksController < ApplicationController
   def find_or_create_user
     @user = current_user
     if @user.nil?
-      redirect_to automatic_create_path
+      redirect_to automatic_create_path and return
     end
   end
 
