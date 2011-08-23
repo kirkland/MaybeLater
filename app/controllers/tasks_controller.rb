@@ -31,12 +31,8 @@ class TasksController < ApplicationController
   def find_or_create_user
     @user = current_user
     if @user.nil?
-      random_password = random_string
-      redirect_to 'users#create', params => {:user => {:password => random_password, :password_confirmation => random_password, :username => random_string, :email => "#{random_string}@example.com"}}
+      redirect_to automatic_create_path
     end
   end
 
-  def random_string
-    (0...8).map{97.+(rand(25)).chr}.join
-  end
 end

@@ -13,5 +13,7 @@ MaybeLater::Application.routes.draw do
     end
   end
 
+  match 'automatic_create' => "users#create"
+
   root :to => 'tasks#index'
 end

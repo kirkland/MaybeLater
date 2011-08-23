@@ -16,6 +16,13 @@ class UsersController < ApplicationController
     end  
   end
 
+  def automatic_create
+    random_password = random_string
+    @user = User.new({:password => random_password, :password_confirmation => random_password, :username => random_string, :email => "#{random_string}@example.com"})
+    sign_in(@user)
+    redirect_to root_path
+  end
+
   def edit
     @user = current_user
   end
@@ -35,5 +42,9 @@ class UsersController < ApplicationController
 
   def find_user
     @user = current_user
+  end
+
+  def random_string
+    (0...8).map{97.+(rand(25)).chr}.join
   end
 end

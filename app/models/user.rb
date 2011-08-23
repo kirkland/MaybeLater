@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
     self.ordered_task_ids = input_ordered_task_ids
     save!
   end
+
+  def after_create
+    self.update_attribute(:ordered_task_ids, [])
+  end
 end
